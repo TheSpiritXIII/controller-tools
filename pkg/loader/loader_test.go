@@ -22,12 +22,12 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"sigs.k8s.io/controller-tools/pkg/loader"
+	"github.com/TheSpiritXIII/controller-tools/pkg/loader"
 )
 
 var _ = Describe("Loader parsing root module", func() {
 	const (
-		rootPkg    = "sigs.k8s.io/controller-tools"
+		rootPkg    = "github.com/TheSpiritXIII/controller-tools"
 		pkgPkg     = rootPkg + "/pkg"
 		loaderPkg  = pkgPkg + "/loader"
 		testmodPkg = loaderPkg + "/testmod"
@@ -63,18 +63,18 @@ var _ = Describe("Loader parsing root module", func() {
 			Expect(os.Chdir(previousWorkingDir)).To(Succeed())
 		})
 
-		Context("with roots=[sigs.k8s.io/controller-tools/pkg/loader/testmod/submod1]", func() {
+		Context("with roots=[github.com/TheSpiritXIII/controller-tools/pkg/loader/testmod/submod1]", func() {
 			It("should load one package", func() {
-				pkgs, err := loader.LoadRoots("sigs.k8s.io/controller-tools/pkg/loader/testmod/submod1")
+				pkgs, err := loader.LoadRoots("github.com/TheSpiritXIII/controller-tools/pkg/loader/testmod/submod1")
 				Expect(err).ToNot(HaveOccurred())
 				Expect(pkgs).To(HaveLen(1))
 				assertPkgExists(testmodPkg+"/submod1", pkgs)
 			})
 		})
 
-		Context("with roots=[sigs.k8s.io/controller-tools/pkg/loader/testmod/...]", func() {
+		Context("with roots=[github.com/TheSpiritXIII/controller-tools/pkg/loader/testmod/...]", func() {
 			It("should load six packages", func() {
-				pkgs, err := loader.LoadRoots("sigs.k8s.io/controller-tools/pkg/loader/testmod/...")
+				pkgs, err := loader.LoadRoots("github.com/TheSpiritXIII/controller-tools/pkg/loader/testmod/...")
 				Expect(err).ToNot(HaveOccurred())
 				Expect(pkgs).To(HaveLen(6))
 				assertPkgExists(testmodPkg, pkgs)
@@ -86,9 +86,9 @@ var _ = Describe("Loader parsing root module", func() {
 			})
 		})
 
-		Context("with roots=[sigs.k8s.io/controller-tools/pkg/loader/testmod/..., ./...]", func() {
+		Context("with roots=[github.com/TheSpiritXIII/controller-tools/pkg/loader/testmod/..., ./...]", func() {
 			It("should load seven packages", func() {
-				pkgs, err := loader.LoadRoots("sigs.k8s.io/controller-tools/pkg/loader/testmod/...", "./...")
+				pkgs, err := loader.LoadRoots("github.com/TheSpiritXIII/controller-tools/pkg/loader/testmod/...", "./...")
 				Expect(err).ToNot(HaveOccurred())
 				Expect(pkgs).To(HaveLen(7))
 				assertPkgExists(testmodPkg, pkgs)

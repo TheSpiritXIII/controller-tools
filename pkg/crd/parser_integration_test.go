@@ -28,10 +28,10 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"sigs.k8s.io/yaml"
 
-	"sigs.k8s.io/controller-tools/pkg/crd"
-	crdmarkers "sigs.k8s.io/controller-tools/pkg/crd/markers"
-	"sigs.k8s.io/controller-tools/pkg/loader"
-	"sigs.k8s.io/controller-tools/pkg/markers"
+	"github.com/TheSpiritXIII/controller-tools/pkg/crd"
+	crdmarkers "github.com/TheSpiritXIII/controller-tools/pkg/crd/markers"
+	"github.com/TheSpiritXIII/controller-tools/pkg/loader"
+	"github.com/TheSpiritXIII/controller-tools/pkg/markers"
 )
 
 func packageErrors(pkg *loader.Package, filterKinds ...packages.ErrorKind) error {

@@ -25,11 +25,11 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"sigs.k8s.io/controller-tools/pkg/crd"
-	"sigs.k8s.io/controller-tools/pkg/deepcopy"
-	"sigs.k8s.io/controller-tools/pkg/genall"
-	"sigs.k8s.io/controller-tools/pkg/loader"
-	"sigs.k8s.io/controller-tools/pkg/markers"
+	"github.com/TheSpiritXIII/controller-tools/pkg/crd"
+	"github.com/TheSpiritXIII/controller-tools/pkg/deepcopy"
+	"github.com/TheSpiritXIII/controller-tools/pkg/genall"
+	"github.com/TheSpiritXIII/controller-tools/pkg/loader"
+	"github.com/TheSpiritXIII/controller-tools/pkg/markers"
 )
 
 type outputToMap map[string]*outputFile

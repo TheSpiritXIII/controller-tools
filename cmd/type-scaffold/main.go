@@ -20,7 +20,7 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"sigs.k8s.io/controller-tools/pkg/typescaffold"
+	"github.com/TheSpiritXIII/controller-tools/pkg/typescaffold"
 )
 
 func main() {

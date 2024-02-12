@@ -26,10 +26,10 @@ import (
 	"strings"
 
 	apiext "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
-	crdmarkers "sigs.k8s.io/controller-tools/pkg/crd/markers"
+	crdmarkers "github.com/TheSpiritXIII/controller-tools/pkg/crd/markers"
 
-	"sigs.k8s.io/controller-tools/pkg/loader"
-	"sigs.k8s.io/controller-tools/pkg/markers"
+	"github.com/TheSpiritXIII/controller-tools/pkg/loader"
+	"github.com/TheSpiritXIII/controller-tools/pkg/markers"
 )
 
 // Schema flattening is done in a recursive mapping method.

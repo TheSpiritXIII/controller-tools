@@ -25,9 +25,9 @@ import (
 	"golang.org/x/tools/go/packages"
 	pkgstest "golang.org/x/tools/go/packages/packagestest"
 	apiext "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
-	crdmarkers "sigs.k8s.io/controller-tools/pkg/crd/markers"
-	testloader "sigs.k8s.io/controller-tools/pkg/loader/testutils"
-	"sigs.k8s.io/controller-tools/pkg/markers"
+	crdmarkers "github.com/TheSpiritXIII/controller-tools/pkg/crd/markers"
+	testloader "github.com/TheSpiritXIII/controller-tools/pkg/loader/testutils"
+	"github.com/TheSpiritXIII/controller-tools/pkg/markers"
 )
 
 func transform(t *testing.T, expr string) *apiext.JSONSchemaProps {
@@ -35,7 +35,7 @@ func transform(t *testing.T, expr string) *apiext.JSONSchemaProps {
 	// to get an ast.Expr with all the associated metadata required
 	// to run typeToSchema upon it:
 
-	moduleName := "sigs.k8s.io/controller-tools/pkg/crd"
+	moduleName := "github.com/TheSpiritXIII/controller-tools/pkg/crd"
 	modules := []pkgstest.Module{
 		{
 			Name: moduleName,

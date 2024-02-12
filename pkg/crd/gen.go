@@ -26,11 +26,11 @@ import (
 	apiext "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	crdmarkers "sigs.k8s.io/controller-tools/pkg/crd/markers"
-	"sigs.k8s.io/controller-tools/pkg/genall"
-	"sigs.k8s.io/controller-tools/pkg/loader"
-	"sigs.k8s.io/controller-tools/pkg/markers"
-	"sigs.k8s.io/controller-tools/pkg/version"
+	crdmarkers "github.com/TheSpiritXIII/controller-tools/pkg/crd/markers"
+	"github.com/TheSpiritXIII/controller-tools/pkg/genall"
+	"github.com/TheSpiritXIII/controller-tools/pkg/loader"
+	"github.com/TheSpiritXIII/controller-tools/pkg/markers"
+	"github.com/TheSpiritXIII/controller-tools/pkg/version"
 )
 
 // The identifier for v1 CustomResourceDefinitions.

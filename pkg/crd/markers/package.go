@@ -17,7 +17,7 @@ limitations under the License.
 package markers
 
 import (
-	"sigs.k8s.io/controller-tools/pkg/markers"
+	"github.com/TheSpiritXIII/controller-tools/pkg/markers"
 )
 
 func init() {

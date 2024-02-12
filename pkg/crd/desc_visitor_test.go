@@ -22,7 +22,7 @@ import (
 
 	apiext "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 
-	"sigs.k8s.io/controller-tools/pkg/crd"
+	"github.com/TheSpiritXIII/controller-tools/pkg/crd"
 )
 
 var _ = Describe("TruncateDescription", func() {

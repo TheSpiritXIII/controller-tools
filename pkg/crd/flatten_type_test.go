@@ -24,8 +24,8 @@ import (
 	apiext "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 
 	"golang.org/x/tools/go/packages"
-	"sigs.k8s.io/controller-tools/pkg/crd"
-	"sigs.k8s.io/controller-tools/pkg/loader"
+	"github.com/TheSpiritXIII/controller-tools/pkg/crd"
+	"github.com/TheSpiritXIII/controller-tools/pkg/loader"
 )
 
 var _ = Describe("General Schema Flattening", func() {

@@ -25,8 +25,8 @@ import (
 	"golang.org/x/tools/go/packages"
 	rawyaml "gopkg.in/yaml.v2"
 
-	"sigs.k8s.io/controller-tools/pkg/loader"
-	"sigs.k8s.io/controller-tools/pkg/markers"
+	"github.com/TheSpiritXIII/controller-tools/pkg/loader"
+	"github.com/TheSpiritXIII/controller-tools/pkg/markers"
 )
 
 // Generators are a list of Generators.
